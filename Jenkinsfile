@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t santhoshawsengineer/loadgenerator:latest ."
+                        sh "docker build -t santhoshawsdocker/loadgenerator:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push santhoshawsengineer/loadgenerator:latest"
+                        sh "docker push santhoshawsdocker/loadgenerator:latest"
                     }
                 }
             }
